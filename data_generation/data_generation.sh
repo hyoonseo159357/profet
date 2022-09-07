@@ -7,10 +7,11 @@ BATCH_SIZE=$4
 USING_GPU_NUM=$5
 PROF_MODE=$6
 
-IMAGE_ID="ami-05f0a758b1c9909d1"
-AWS_KEY="ys-oregon2"
-SUBNET_ID="subnet-3deb2844"
-SG_ID="sg-0050bf02c2488921b"
+# 버지니아기준
+IMAGE_ID="ami-0ea8263cbf553488e". 
+AWS_KEY="ys"
+SUBNET_ID="subnet-f791a893"
+SG_ID="sg-0f2dfaeaef1c8f808"
 
 # Launch instance & get informations
 echo 'launch instance'
