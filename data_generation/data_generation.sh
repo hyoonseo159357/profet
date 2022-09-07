@@ -25,6 +25,7 @@ echo $INSTANCE_DNS
 # Instance setting
 sleep 60
 echo 'git clone and setting instance'
+AWS_KEY="ys-oregon2.pem"
 ssh -o "StrictHostKeyChecking no" -i $AWS_KEY ubuntu@$INSTANCE_DNS 'git clone https://github.com/hyoonseo159357/profet.git'
 ssh -i $AWS_KEY -t ubuntu@$INSTANCE_DNS 'cd /home/ubuntu/profet/data_generation/;sudo bash ./settings.sh'
 
