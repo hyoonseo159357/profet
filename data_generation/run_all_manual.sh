@@ -5,6 +5,7 @@ do
     for batchsize in 16 32 64 128 256 
     do
       for prof_or_latency in profiling latency
+      do
         sudo python3 /home/ubuntu/profet/data_generation/workload/profile_workload.py --model $model --dataset $dataset
       done
     done
