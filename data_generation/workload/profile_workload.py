@@ -135,5 +135,4 @@ class BatchTimeCallback(tf.keras.callbacks.Callback):
 latency_callback = BatchTimeCallback()
 
 prof_model_select = {'profiling': [tboard_callback], 'latency': [latency_callback], 'vanilla': []}
-model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs,
-          verbose=1, validation_data=(x_test, y_test), callbacks=prof_model_select[args.prof_or_latency])
+model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_data=(x_test, y_test), callbacks=prof_model_select[args.prof_or_latency])
