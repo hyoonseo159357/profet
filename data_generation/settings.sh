@@ -8,3 +8,11 @@ pip3 install --upgrade pip
 pip3 install -r requirements.txt
 mkdir ./logs
 mkdir ./tensorstats
+
+sudo apt update
+sudo killall apt apt-get
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock*
+sudo dpkg --configure -a
+sudo apt update
