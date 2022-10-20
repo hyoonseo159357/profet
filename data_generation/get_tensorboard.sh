@@ -1,5 +1,6 @@
 #!/bin/bash
-tensorboard --logdir=./logs &
+# tensorboard --logdir=./logs &
+python3 -m tensorboard.main --logdir=~/my/training/dir
 sleep 10
 
 NAME_LIST=$(find ./logs -name *.trace.json.gz)
