@@ -30,26 +30,26 @@ AWS_KEY="ys-oregon2.pem"
 ssh -o "StrictHostKeyChecking no" -i $AWS_KEY ubuntu@$INSTANCE_DNS 'git clone https://github.com/hyoonseo159357/profet.git'
 ssh -i $AWS_KEY -t ubuntu@$INSTANCE_DNS 'cd /home/ubuntu/profet/data_generation/;sudo bash ./settings.sh'
 
-# # Run Experiments
-# sleep 10
-# echo 'start experiment'
-# EXP_CMD="cd /home/ubuntu/profet/data_generation/;sudo bash ./run_single_workload.sh $INSTANCE_TYPE $PROF_MODE"
-# ssh -i $AWS_KEY -t ubuntu@$INSTANCE_DNS $EXP_CMD
+# Run Experiments
+sleep 10
+echo 'start experiment'
+EXP_CMD="cd /home/ubuntu/profet/data_generation/;sudo bash ./run_single_workload.sh $INSTANCE_TYPE $PROF_MODE"
+ssh -i $AWS_KEY -t ubuntu@$INSTANCE_DNS $EXP_CMD
 
-# # Run tensorboard & scraping profiling results
-# sleep 10
-# echo 'start tensorboard'
-# TB_CMD="cd /home/ubuntu/profet/data_generation/;sudo bash ./get_tensorboard.sh $INSTANCE_TYPE"
-# ssh -i $AWS_KEY -t ubuntu@$INSTANCE_DNS $TB_CMD
+# Run tensorboard & scraping profiling results
+sleep 10
+echo 'start tensorboard'
+TB_CMD="cd /home/ubuntu/profet/data_generation/;sudo bash ./get_tensorboard.sh $INSTANCE_TYPE"
+ssh -i $AWS_KEY -t ubuntu@$INSTANCE_DNS $TB_CMD
 
-# # Get profiling results
-# sleep 10
-# mkdir $INSTANCE_TYPE
-# scp -i $AWS_KEY \
-# ubuntu@$INSTANCE_DNS:~/profet/data_generation/tensorstats/* ./$INSTANCE_TYPE/
+# Get profiling results
+sleep 10
+mkdir $INSTANCE_TYPE
+scp -i $AWS_KEY \
+ubuntu@$INSTANCE_DNS:~/profet/data_generation/tensorstats/* ./$INSTANCE_TYPE/
 
-# # Terminate instance
-# sleep 10
-# echo 'terminate instance'
-# TERMINATE_INFO=$(aws ec2 terminate-instances --instance-ids $INSTANCE_ID)
-# echo $TERMINATE_INFO
+# Terminate instance
+sleep 10
+echo 'terminate instance'
+TERMINATE_INFO=$(aws ec2 terminate-instances --instance-ids $INSTANCE_ID)
+echo $TERMINATE_INFO
