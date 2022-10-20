@@ -6,7 +6,6 @@ TB_URL1="http://localhost:6006/data/plugin/profile/data?run="
 TB_URL3="/"
 TB_URL5="&tag=tensorflow_stats&host="
 TB_URL7="&tqx=out:csv;"
-
 for NAME in $NAME_LIST
 do
         TB_URL2=$(echo $NAME | cut -d "/" -f 3)
@@ -17,5 +16,4 @@ do
         curl -o $FILENAME $TB_URL
         sleep 1
 done
-
 ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
