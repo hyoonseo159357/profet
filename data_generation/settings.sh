@@ -3,16 +3,15 @@
 # rm /usr/local/cuda
 # ln -s /usr/local/cuda-10.1 /usr/local/cuda
 
-# Upgrade pip3 and install packages
-pip3 install --upgrade pip
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+sudo apt-get remove  python3-apt
+sudo apt-get install python3-apt
+sudo apt-get update 
+sudo apt-get install python3-pip   # pip3 이 없어서 설치해줘야한다.
 
-sudo apt update
-sudo killall apt apt-get
-sudo rm /var/lib/apt/lists/lock
-sudo rm /var/cache/apt/archives/lock
-sudo rm /var/lib/dpkg/lock*
-sudo dpkg --configure -a
-sudo apt update
+# # Upgrade pip3 and install packages
+# pip3 install --upgrade pip
 
 pip3 install -r requirements.txt
 mkdir ./logs
