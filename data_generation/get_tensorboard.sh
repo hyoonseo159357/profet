@@ -1,7 +1,9 @@
 #!/bin/bash
 tensorboard --logdir=./logs &
 sleep 10
+
 NAME_LIST=$(find ./logs -name *.trace.json.gz)
+
 TB_URL1="http://localhost:6006/data/plugin/profile/data?run="
 TB_URL3="/"
 TB_URL5="&tag=tensorflow_stats&host="
