@@ -6,7 +6,7 @@ do
     do
       for prof_or_latency in profiling latency
       do
-        sudo python3 /home/ubuntu/profet/data_generation/workload/profile_workload.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
+        sudo python3 /root/profet/data_generation/workload/profile_workload.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
       done
     done
   done
