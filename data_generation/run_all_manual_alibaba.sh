@@ -6,7 +6,7 @@ do
     do
       for prof_or_latency in profiling latency
       do
-        sudo python3 /home/kmubigdatagcp/profet/data_generation/workload/profile_workload.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
+        sudo python3 /root/profet/data_generation/workload/profile_workload.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
       done
     done
   done
@@ -20,7 +20,7 @@ do
     do
       for prof_or_latency in profiling latency
       do
-        sudo python3 /home/kmubigdatagcp/profet/data_generation/workload/profile_workload2.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
+        sudo python3 /root/profet/data_generation/workload/profile_workload2.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
       done
     done
   done
@@ -34,7 +34,7 @@ do
     do
       for prof_or_latency in profiling latency
       do
-        sudo python3 /home/kmubigdatagcp/profet/data_generation/workload/profile_workload3.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
+        sudo python3 /root/profet/data_generation/workload/profile_workload3.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
       done
     done
   done
@@ -48,7 +48,7 @@ do
     do
       for prof_or_latency in profiling latency
       do
-        sudo python3 /home/kmubigdatagcp/profet/data_generation/workload/profile_workload4.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
+        sudo python3 /root/profet/data_generation/workload/profile_workload4.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
       done
     done
   done
@@ -62,7 +62,7 @@ do
     do
       for prof_or_latency in profiling latency
       do
-        sudo python3 /home/kmubigdatagcp/profet/data_generation/workload/profile_workload5.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
+        sudo python3 /root/profet/data_generation/workload/profile_workload5.py --model $model --dataset $dataset --batch_size $batchsize --prof_or_latency $prof_or_latency
       done
     done
   done
