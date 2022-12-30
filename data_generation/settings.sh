@@ -14,4 +14,8 @@ sudo -H pip3 install --upgrade pip
 pip3 install -r requirements.txt
 mkdir ./logs
 mkdir ./tensorstats
+mkdir ./tensorstats2
+mkdir ./tensorstats3
+mkdir ./tensorstats4
+mkdir ./tensorstats5
 
