@@ -101,7 +101,7 @@ else:
     
 time_now = datetime.now().strftime("%Y%m%d-%H%M%S.%f")
 job_name = f'{args.instance_type}-{args.dataset}-{model_name}-{optimizer}-{batch_size}-{use_gpu_num}-{time_now}'
-logs = f'/home/kmubigdatagcp/profet/data_generation/logs5/{job_name}'
+logs = f'/root/profet/data_generation/logs5/{job_name}'
 tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = logs,
                                                  histogram_freq = 1,
                                                  profile_batch = prof_range)
@@ -112,7 +112,7 @@ class BatchTimeCallback(tf.keras.callbacks.Callback):
         self.all_times = []
 
     def on_train_end(self, logs=None):
-        time_filename = f'/home/kmubigdatagcp/profet/data_generation/tensorstats5/times-{job_name}.pickle'
+        time_filename = f'/root/profet/data_generation/tensorstats5/times-{job_name}.pickle'
         time_file = open(time_filename, 'ab')
         pickle.dump(self.all_times, time_file)
         time_file.close()
