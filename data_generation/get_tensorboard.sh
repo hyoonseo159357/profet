@@ -24,7 +24,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 # 2
 
 #!/bin/bash
-tensorboard --logdir=./logs &
+tensorboard --logdir=./logs2 &
 sleep 10
 
 NAME_LIST=$(find ./logs2 -name *.trace.json.gz)
@@ -48,7 +48,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 # 3
 
 #!/bin/bash
-tensorboard --logdir=./logs &
+tensorboard --logdir=./logs3 &
 sleep 10
 
 NAME_LIST=$(find ./logs3 -name *.trace.json.gz)
@@ -72,7 +72,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 # 4
 
 #!/bin/bash
-tensorboard --logdir=./logs &
+tensorboard --logdir=./logs4 &
 sleep 10
 
 NAME_LIST=$(find ./logs4 -name *.trace.json.gz)
@@ -97,7 +97,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 # 5
 
 #!/bin/bash
-tensorboard --logdir=./logs &
+tensorboard --logdir=./logs5 &
 sleep 10
 
 NAME_LIST=$(find ./logs5 -name *.trace.json.gz)
