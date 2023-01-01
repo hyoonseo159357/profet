@@ -112,7 +112,7 @@ do
         TB_URL4=$(echo $NAME | cut -d "/" -f 6)
         TB_URL6=$(echo $NAME | cut -d "/" -f 7 | cut -d "." -f 1)
         TB_URL="$TB_URL1$TB_URL2$TB_URL3$TB_URL4$TB_URL5$TB_URL6$TB_URL7"
-        FILENAME="./tensorstats/$TB_URL2$TB_URL4.csv"
+        FILENAME="./tensorstats5/$TB_URL2$TB_URL4.csv"
         curl -o $FILENAME $TB_URL
         sleep 1
 done
