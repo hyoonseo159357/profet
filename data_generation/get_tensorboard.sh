@@ -27,7 +27,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 tensorboard --logdir=./logs &
 sleep 10
 
-NAME_LIST=$(find ./logs -name *.trace.json.gz)
+NAME_LIST=$(find ./logs2 -name *.trace.json.gz)
 
 TB_URL1="http://localhost:6006/data/plugin/profile/data?run="
 TB_URL3="/"
@@ -51,7 +51,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 tensorboard --logdir=./logs &
 sleep 10
 
-NAME_LIST=$(find ./logs -name *.trace.json.gz)
+NAME_LIST=$(find ./logs3 -name *.trace.json.gz)
 
 TB_URL1="http://localhost:6006/data/plugin/profile/data?run="
 TB_URL3="/"
@@ -75,7 +75,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 tensorboard --logdir=./logs &
 sleep 10
 
-NAME_LIST=$(find ./logs -name *.trace.json.gz)
+NAME_LIST=$(find ./logs4 -name *.trace.json.gz)
 
 TB_URL1="http://localhost:6006/data/plugin/profile/data?run="
 TB_URL3="/"
@@ -100,7 +100,7 @@ ps -ef | grep tensorboard | grep -v grep | awk '{print $2}' | xargs kill
 tensorboard --logdir=./logs &
 sleep 10
 
-NAME_LIST=$(find ./logs -name *.trace.json.gz)
+NAME_LIST=$(find ./logs5 -name *.trace.json.gz)
 
 TB_URL1="http://localhost:6006/data/plugin/profile/data?run="
 TB_URL3="/"
