@@ -1,0 +1,1 @@
+run_all_manual_gcp.sh
