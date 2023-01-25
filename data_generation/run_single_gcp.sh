@@ -1,4 +1,4 @@
-or model in ResNet18
+for model in ResNet18
 do
   for dataset in  32
   do
